@@ -22,7 +22,7 @@
    {"featureType":"transit","stylers":[{"visibility":"off"}]},
    {"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},
    {"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},
-   {"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},
+   {"featureType":"water","elementType":"geometry","stylers":[{"color":"#a3c7df"}]},
    {"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#a3c7df"}]}];
     var rd = {lat: 18.9452078, lng: -70.7282545};
         map = new google.maps.Map(document.getElementById('map'), {
