@@ -38,9 +38,7 @@
         document.getElementsByTagName('head')[0].appendChild(script);
 
       var marker, i;
-      var modal = function(con){
-        return "#modal"+(con+1);
-       }
+
       window.eqfeed_callback = function(results) {
      for (i = 0; i < results.datos.length; i++) { 
          var a = moment(new Date(), 'DD');
@@ -49,6 +47,9 @@
           var magn = function(){
             return results.datos[i]._sismo_magnitud[0];
           }
+       var modal = function(){
+        return "#modal"+results.datos[i]._sismo_id;
+       }
           var color = function(){
             var c = ah.diff(b, 'hours');
             if(c<2){ return 'red'; 
@@ -62,7 +63,7 @@
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(results.datos[i]._sismo_lat[0],results.datos[i]._sismo_lng[0]),
         map: map,
-        modal : modal(i),
+        modal : modal(),
         icon: {
             path: google.maps.SymbolPath.CIRCLE,
             scale: magn()*1.9,
